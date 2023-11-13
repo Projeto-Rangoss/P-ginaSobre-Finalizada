@@ -1,0 +1,464 @@
+
+/* Estilizações Gerais */
+body{
+    margin: 0;
+    background-color: #000000;
+    background-image: url(/img/fundo-grande.jpg);
+    background-position: 100%;
+}
+
+main {
+    background-color: #000000a6;
+}
+
+::selection {
+    color: #000000;
+    background: #FFCA4E;
+  }
+
+/* DIV LINHA */
+.divLinhaEmpresa{
+    display: flex;
+    justify-content: flex-end;
+}
+.lihaServicos{
+    display: flex;
+    justify-content: center;
+    margin-left: 10px ;
+}
+
+.linhaDoServico {
+    margin-left: 10px;
+}
+
+.linhaEquipe{
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+/* Estilização Dos Serviços */
+.servicos{
+    display: grid;
+    gap: 5px;
+}
+.item{
+    max-width: 100%;
+    background-color: #50483D;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px; 
+    opacity: 0.8;
+}
+.item:hover{
+    transition: all 0.5s;
+    transform: scale(1.002);
+    opacity: 1.05;
+    filter:drop-shadow(0px 0px 5px #ffffff); /*ANIMAÇÃO DE CORES AO REDOR DA VIDA*/
+
+}
+
+.item h4, .lorem {
+    margin-left: 10px;
+    color: #ffffff;
+}
+
+.item h4{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+
+.lorem {
+    font-size: 18px;
+}
+
+.lorem::first-letter {
+    font-size: 22px;
+    font-weight: bold;
+    color: #EFB734;
+    margin-left: 5px;
+    margin-right: 1px;
+}
+
+.servicos-titulo{
+    margin-bottom: 0;
+    color: #FFCA4E;
+    font-size: 22px;
+    text-transform: uppercase;
+    justify-content: start;
+    margin-left: 10px ;
+}
+
+.linha-titulo{
+    width: 210px;
+    margin-top: 0;
+    margin-left: 40px;
+}
+
+.fotoBloco{
+    justify-self: flex-end;
+    width: 40%;
+    align-self : center ;
+    margin-right: 50px;
+    border-radius: 5px;
+    border: #FFCA4E 2px solid;
+
+}
+
+.foto {
+    display: none;
+}
+
+/* RESPONSIVIDADE SERVIÇOS */
+
+@media(max-width: 800px){
+    .servicos-titulo{
+        text-align: center;
+        margin-left: 0;
+    }
+
+    p::first-letter{
+        margin-right: 0;
+    }
+
+    .linhaServico {
+        display: flex;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .linhaDoServico{
+        margin-left: 0;
+    }
+
+    .fotoBloco{
+        width: 75%;
+        margin-right: 30px;
+    }
+
+    .item h4{
+        font-size: 25px;
+    }
+    
+    .lorem {
+        font-size: 20px;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media(max-width: 500px){
+    .item{
+        grid-template-columns: 1fr;;
+        margin: 5px auto;
+        justify-content: center;
+        background-color: #2e2923b6;
+    }
+
+    p::first-letter{
+        margin-right: 0;
+    }
+
+    .servicos-titulo {
+        text-align: center;
+        margin-left: 0;
+        font-size: 25px;
+
+    }
+
+    .linhaServico{
+        justify-content: center;
+        margin-left: 10px;
+    }
+
+    .linhaDoServico{
+        margin-left: 0;
+    }
+
+    .linha {
+        width: 100%;
+    }
+
+    .fotoBloco {
+        width: 75%;
+        margin: 0;
+        justify-self: center;
+        display: none;
+    }
+
+    .foto {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .fotoResponsivo{
+        width: 95%;
+        margin: 0;
+        border-radius: 5px;
+        border: #FFCA4E 2px solid;
+    }
+
+    .item h4{
+        font-size: 22px;
+        margin-top: 10px;
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .lorem {
+        font-size: 20px;
+    }
+}
+
+
+
+
+/* ESTILIZAÇÃO NOSSA EMPRESA */
+
+/* DIV Nossa EMPRESA-ESTILIZAÇÃO */
+.loremEmpresa{
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.empresaSubtitulo{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #FFCA4E;
+    text-align: end;
+}
+.nossaEmpresa{
+margin: 50px;
+display: grid;
+gap: 20px;
+grid-template-columns: 1fr 1fr;
+}
+
+.textoNossaEmpresa{
+    margin-top: 150px;
+}
+
+
+.personagemDesktop{
+    width: 70%;
+}
+.personagemDesktop:hover{
+        transition: all 0.2s;
+        opacity: 1.05;
+        filter:drop-shadow(0px 0px 5px #ffffff); /*ANIMAÇÃO DE CORES AO REDOR DA VIDA*/
+    
+}
+
+
+/* Ocultando o texto que não aparece na versão desktop */
+.responsivo{
+    display: none;
+}
+
+
+
+/* Estilizando a primeira letra dos parágrafos */
+.loremEmpresa::first-letter {
+
+    font-size: 22px;
+    font-weight: bold;
+    color: #EFB734;
+    margin-left: 5px;
+    margin-right: 1px;
+}
+
+
+
+/* RESPONSIVIDADE NOSSA EMPRESA */
+
+@media(max-width: 900px){
+    .nossaEmpresa {
+        margin: 50px 20px;
+    }
+
+    p::first-letter{
+        margin-right: 0;
+    }
+
+    .imgEmpresa{
+        align-content: flex-start;
+    }
+
+    
+
+    .loremEmpresa{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 20px;
+    }
+
+    .personagemDesktop {
+        width: 75%;
+    }
+
+
+    /* Ocultando o texto da versão desktop */
+    .textoNossaEmpresa{
+        margin-top: 0;
+        display: none;
+    }
+
+    .empresaSubtitulo{
+        margin-bottom: 7px;
+    }
+
+
+    .p2, .p3, .p4 {
+        grid-column: 1/-1;
+    }
+
+
+    /* Fazendo os paragrafos da versão tablet e mobile aparecer */
+    .responsivo {
+        display: block;
+    }
+
+    
+}
+
+@media(max-width: 500px){
+    .nossaEmpresa {
+        grid-template-columns: 1fr;
+    }
+
+    p::first-letter{
+        margin-right: 0;
+    }
+
+    .empresa {
+        background: #2e2923b6;
+    }
+
+    .personagemDesktop {
+        display: none;
+    }
+
+
+    .empresaSubtitulo{
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .divLinhaEmpresa {
+        justify-content: center;
+    }
+}
+
+
+
+/* ESTILIZAÇÃO NOSSA EQUIPE */
+
+.subtituloEqp{
+    text-transform: uppercase;
+    color: #FFCA4E;
+    font-size: 22px;
+    margin-bottom: 20px;
+
+}
+
+.nossaEqp {
+    margin-left: 10px;
+    margin-bottom: 30px;
+}
+
+
+/*ESTILIZAÇÃO DA PARTE DA EQUIPE*/
+
+.static /*DIV QUE AS OS BLOCOS FICAM DENTRO*/ {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+
+}
+.staticBlocos /*DIV DE CADA BLOCO QUE FICAM AS FOSOS-CONTATOS DO INTEGRANTES*/ {
+    margin: 0px 10px 30px 10px;
+    padding: 30px;
+    border: 1px solid;
+    border-color: #EFB734;
+    border-radius: 50px;
+    height: 350px;
+    width: 200px;
+    background-color:#000;
+}
+.staticBlocos:hover{
+    /* transition: all 0.5s; */
+    transform: scale(1.01);
+    opacity: 1.05;
+    filter:drop-shadow(0px 0px 5px #ffffff); /*ANIMAÇÃO DE CORES AO REDOR DA VIDA*/
+    
+
+}
+
+/*ESTILOS DA DIV DOS INTEGRANTES*/
+
+.demo /*IMAGEM DOS INTEGRANTES*/{
+    border: 1px solid;
+    border-color: #EFB734;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+.ancoras{
+    list-style:disc;
+    text-align: center;
+}
+.subtituloEquipe{
+    text-transform: uppercase;
+    color: #ffff;
+    text-align: center;
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+.icone{
+    margin: 10px;
+    color: #EFB734;
+    width: 30px;
+    height: 30px;
+}
+.icone:hover{
+    filter:drop-shadow(0px 0px 5px #FFD700);
+
+    transform: scale(1.09);
+}
+
+@media(max-width: 800px){
+    .subtituloEqp{
+        text-align: center;
+    }
+
+    .linhaEquipe {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 500px){
+    .subtituloEqp{
+        text-align: center;
+    }
+
+    .linhaEquipe {
+        display: flex;
+        justify-content: center;
+    }
+
+
+}
+
+
+
+
